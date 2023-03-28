@@ -82,7 +82,7 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double = sagenes 
  * Пользователь задает угол в градусах, минутах и секундах (например, 36 градусов 14 минут 35 секунд).
  * Вывести значение того же угла в радианах (например, 0.63256).
  */
-fun angleInRadian(deg: Int, min: Int, sec: Int): Double = deg + (min + sec / 60) / 60)
+fun angleInRadian(deg: Double, min: Double, sec: Double): Double = (deg + (min + sec / 60) / 60) * (PI / 180)
 
 /**
  * Тривиальная (1 балл)
@@ -90,7 +90,7 @@ fun angleInRadian(deg: Int, min: Int, sec: Int): Double = deg + (min + sec / 60)
  * Найти длину отрезка, соединяющего точки на плоскости с координатами (x1, y1) и (x2, y2).
  * Например, расстояние между (3, 0) и (0, 4) равно 5
  */
-fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double = sqr((abs(x1) - abs(x2))) + sqr((abs(y1) - abs(y2)))
+fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double = sqrt((sqr((abs(x1) - abs(x2))) + sqr((abs(y1) - abs(y2)))))
 
 /**
  * Простая (2 балла)
@@ -116,7 +116,7 @@ fun travelMinutes(hoursDepart: Int, minutesDepart: Int, hoursArrive: Int, minute
  * Сколько денег будет на счету через 3 года (с учётом сложных процентов)?
  * Например, 100 рублей под 10% годовых превратятся в 133.1 рубля
  */
-fun accountInThreeYears(initial: Int , percent: Int): Double = initial * 1 + (percent / 100)
+fun accountInThreeYears(initial: Double , percent: Double): Double = initial * 1 + (percent / 100)
 
 /**
  * Простая (2 балла)
